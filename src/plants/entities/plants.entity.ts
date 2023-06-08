@@ -13,7 +13,7 @@ export class PlantsEntity {
   @Column()
   name: string;
 
-  @Column()
+  @Column({ nullable: true })
   picture?: string;
 
   @CreateDateColumn({

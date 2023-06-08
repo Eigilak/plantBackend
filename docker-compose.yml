@@ -1,0 +1,17 @@
+
+version: '3.8'
+services:
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    # we map our container internal port 5432, to our host port 5432
+    ports:
+      - "5432:5432"
+    volumes:
+      # we mount our psql data in a volume for persistance
+      - db:/var/lib/postgresql/data
+volumes:
+  db:

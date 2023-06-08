@@ -19,4 +19,5 @@
     "noFallthroughCasesInSwitch": true,
   },
   "include": ["src/**/*", "test/**/*"],
+  "exclude": ["demoFiler"]
 }
